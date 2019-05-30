@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @phone.name %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @phone.brand %>
+</p>
+
+<p>
+  <strong>Year released:</strong>
+  <%= @phone.year_released %>
+</p>
+
+<p>
+  <strong>Camera:</strong>
+  <%= @phone.camera %>
+</p>
+
+<p>
+  <strong>Mpixels:</strong>
+  <%= @phone.mpixels %>
+</p>
+
+<p>
+  <strong>Internal storage:</strong>
+  <%= @phone.internal_storage %>
+</p>
+
+<p>
+  <strong>Sim:</strong>
+  <%= @phone.sim %>
+</p>
+
+<p>
+  <strong>Screen size:</strong>
+  <%= @phone.screen_size %>
+</p>
+
+<p>
+  <strong>Operating system:</strong>
+  <%= @phone.operating_system %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @phone.stock %>
+</p>
+
+<%= link_to 'Edit', edit_phone_path(@phone) %> |
+<%= link_to 'Back', phones_path %>

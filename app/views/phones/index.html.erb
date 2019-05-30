@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Phones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Year released</th>
+      <th>Camera</th>
+      <th>Mpixels</th>
+      <th>Internal storage</th>
+      <th>Sim</th>
+      <th>Screen size</th>
+      <th>Operating system</th>
+      <th>Stock</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phones.each do |phone| %>
+      <tr>
+        <td><%= phone.name %></td>
+        <td><%= phone.brand %></td>
+        <td><%= phone.year_released %></td>
+        <td><%= phone.camera %></td>
+        <td><%= phone.mpixels %></td>
+        <td><%= phone.internal_storage %></td>
+        <td><%= phone.sim %></td>
+        <td><%= phone.screen_size %></td>
+        <td><%= phone.operating_system %></td>
+        <td><%= phone.stock %></td>
+        <td><a href="phones/decrement/<%= phone.id%>">Sell One</a></td>
+        <td><%= link_to 'Show', phone %></td>
+        <td><%= link_to 'Edit', edit_phone_path(phone) %></td>
+        <td><%= link_to 'Destroy', phone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Phone', new_phone_path %>
